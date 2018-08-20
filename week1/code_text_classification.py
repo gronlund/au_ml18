@@ -328,8 +328,8 @@ class TextClassifier():
         Step 1: Clean Strings the same way training data was cleaned        
         Step 2: Compute the above probability for each class for each string (in log transform space)
                 Here you must ignore words not seen in training data
-        Step 3: Compute the argmax over these probabilities of the classes for each string
-        Step 4: Return the list of most probable class as the prediction for each input string
+        Step 3: Compute the argmax over these probabilities of each class for each string
+        Step 4: Return the list (as numpy array) of the most probable class as the prediction for each input string
 
         functions np.sum, np.log may come very handy here.
         
@@ -344,11 +344,11 @@ class TextClassifier():
             return
         res = np.zeros(len(strings))
         cleaned_strings = self.data_clean(strings)
-        for i, c in enumerate(cleaned_strings):
-            
+        for i, c in enumerate(cleaned_strings):            
+            res[i] = 0 # dummy line you can remove when done , one line is needed 
             ### YOUR CODE  5-10 lines
             ### END CODE
-            pass
+            
             
         return res
 
