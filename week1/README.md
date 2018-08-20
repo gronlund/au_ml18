@@ -16,7 +16,8 @@ For a quick intro to python see [Short Intro to Python and Numpy](AboutPython.ip
 If you are new to python you should really read and understand this first. 
 
 Now download the exercises and look up help when you need it.
-Start with the theoretical exercise: Math Quiz in Python
+Start with the theoretical exercise:
+[Math Quiz in Python](
 
 The coding exercise is not easy but give it a try anyways.
     
