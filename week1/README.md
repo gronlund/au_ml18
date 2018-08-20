@@ -12,10 +12,10 @@ For developing and testing code we recommend  [Ipython](http://ipython.readthedo
 
 You can also use more fancy IDEs like PyCharm of Spyder depending on your own preferences of course.
     
-For a quick intro to python see [Short Intro to Python and Numpy](AboutPython.ipynb)
+For a quick intro to python see [Short Intro to Python and Numpy](AboutPython.ipynb).
 If you are new to python you should really read and understand this first. 
 
-Now download the exercises and look up help when you need it.
+Now get started with the exercises (download the notebooks to work with them).
 Start with the theoretical exercise:
 
 [Math Quiz in Python](theory_mathquiz.ipynb)
