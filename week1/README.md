@@ -19,5 +19,5 @@ Now download the exercises and look up help when you need it.
 Start with the theoretical exercise:
 [Math Quiz in Python](theory_mathquiz.ipynb)
 
-The coding exercise is not easy but give it a try anyways.
+The coding exercise is not easy but give it a try anyways [Coding Exercise](description_text_classification.ipynb)
     
