@@ -6,7 +6,7 @@ You also need jupyter to view jupyter notebooks that contain the exercise descri
 We recommend using [Anaconda](https://www.continuum.io/downloads) for an easy way to install Python 3.
 This should include or allow you to install all the Python libraries we use in the course including jupyter.
 
-You are of course welcome to just install python 3 whichever way you like and for instance you pip to install and manage packages.
+You are of course welcome to just install python 3 whichever way you like and for instance use pip to install and manage packages.
     
 For developing and testing code we recommend  [Ipython](http://ipython.readthedocs.io/en/stable/)
 
