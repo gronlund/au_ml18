@@ -1,4 +1,4 @@
-# Week 1 Exercises **
+# Week 1 Exercises 
 Before you start the first TA session you should have installed Python 3, in particular Python 3.5 or 3.6, on your computer.
 We use python 3.6, but you can use python 3.5 or 3.7 if you wish.
 You also need jupyter to view jupyter notebooks that contain the exercise descriptions.
