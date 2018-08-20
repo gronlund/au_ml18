@@ -1,6 +1,6 @@
 # Week 1 Exercises 
-Before you start the first TA session you should have installed Python 3, in particular Python 3.5 or newer, on your computer.
-We use python 3.6, but you should be able to use python 3.5 or 3.7 without issues.
+Before you start the first TA session you should have installed Python 3, in particular Python 3.6r, on your computer.
+You should be able to use python 3.5 or 3.7 without issues as well if you prefer.
 You also need jupyter to view jupyter notebooks that contain the exercise descriptions.
 
 We recommend using [Anaconda](https://www.continuum.io/downloads) for an easy way to install Python 3.
