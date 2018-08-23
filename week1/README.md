@@ -24,4 +24,3 @@ The coding exercise is not easy but give it a try anyways
 
 [Coding Exercise](description_text_classification.ipynb)
 
-    

@@ -379,12 +379,12 @@ def test_vectorize():
     tc = TextClassifier()
 
     print("TESTING 'make_vocabulary_and_index': \t\t", end='')
-    tc.make_vocabulary_and_index(alphabet)
-
-    assert vocab == tc.vocabulary, "Error with 'make_vocabulary_and_index'.\nExpected vocabulary: \t{0}\n Got: \t\t{1}".format(vocab, tc.vocabulary)
+    tc.make_vocabulary_and_index(word_lists)
+    target_vocab = {'a', 'b', 'c', 'f', 'k'}    
+    
+    assert target_vocab == tc.vocabulary, "Error with 'make_vocabulary_and_index'.\nExpected vocabulary: \t{0}\n Got: \t\t{1}".format(target_vocab, tc.vocabulary)
 
     # Test word_to_index and index_to_word by checking they are inverse mappings. 
-    # The next two lines have errors, didn't have time to fix that. 
     # inv_map = {v: k for k, v in tc.word_to_index.items()} 
     # assert tc.index_to_word == inv_map, "Error with 'make_vocabulary_and_index'.\nExpected that the dictionaries 'index_to_word' and 'word_to_index' are each others inverse. This was not the case. "
     print("PASSED!")
