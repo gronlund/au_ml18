@@ -7,6 +7,6 @@ Start with the theoretical exercise:
 The suggests order is as follows.
 * [Coding Exercise: Using scikit-learn for machine learning - intro](sklearn_intro.ipynb)
 * [Coding Exercise: Using scikit-learn for Text Classification - intro](IndustriCodes.ipynb)
-* [Theory Exercies:](theory.ipynb)
+* [Theory Exercies](theory.ipynb)
 
 
