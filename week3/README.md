@@ -5,7 +5,7 @@ This week the main coding exercise is quite comprehensive.
 There are not so many theoretical questions but some of them are very hard.
 So if time runs out ensure that you have read at least read all the exercises.
 
-Everyone should consider the first exercise which asks you to prepare a five minute exam on Linear Regression.
+Everyone should consider the first theory exercise which asks you to prepare a five minute exam on Linear Regression.
 
 Now get started with the exercises (download the notebooks to work with them).
 
