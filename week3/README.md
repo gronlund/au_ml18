@@ -12,4 +12,5 @@ Now get started with the exercises (download the notebooks to work with them).
 The suggested order is as follows (except all must look at first theory exercise).
 * [Coding Exercise: Plotting lines (hyperplanes)](hyperplanes.ipynb)
 * [Coding Exercise: Linear Classifiers making Nonlinear decisions](description_nonlinear.ipynb)
+Remember to download **code_nonlinear.py** as well
 * [Theory Exercies](theory.ipynb)
