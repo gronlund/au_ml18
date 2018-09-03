@@ -163,7 +163,7 @@ def square_transform(X):
     
 def plot_contour(w, phi, ax):
     """
-    At first make a solution with for loops.
+    At first make a solution with for loops. 
        
     Then if you have time, aim to make a vectorized solution! There are different approaches to obtain this. 
     If you have built coordinate grids as above using meshgrid, then xm and ym are 100x100 arrays. 
@@ -178,7 +178,7 @@ def plot_contour(w, phi, ax):
     obtaining a 1x10000 array and reshaping back to a 100x100 array
     (for this the NumPy command reshape is useful)
        
-    Or you can try the naive version.
+    If this does not work or you are pressed for time you can try the naive version.
 
     Args: 
      w: np.array shape (d,) the decision boundary vector
@@ -256,22 +256,28 @@ def plot_square_transform():
 def contour_test():
     """ Test contour algorithm """
     D = load_data()
-    fig, axes = plt.subplots(1, 4, figsize=(20, 16))
-    for i in range(1, 5):
-        print('Contour for data set {0}'.format(i))
-        X = D['X%d' % i]
-        y = D['y%d' % i]
-        Xt = square_transform(X)
-        cls = PerceptronClassifier()
-        cls.fit(Xt, y)
-        w_pla = cls.w         
-        ax = axes[i-1]        
-        ax.scatter(X[:,0], X[:,1], c=y, cmap=plt.cm.Paired, s=20)
-        plot_contour(w_pla, square_transform, ax)
-        ax.set_title('Data Set {0}'.format(i))
-        ax.set_xlim([-1, 1])
-        ax.set_title('Data set {0}: Score: {1}'.format(i, cls.score(Xt, y)))
+    fig, axes = plt.subplots(1, 2, figsize=(20, 16))
+    print('Contour for data set {0}'.format(1))
+    X = D['X1']
+    y = D['y1']
+    Xt = square_transform(X)
+    cls = PerceptronClassifier()
+    cls.fit(Xt, y)
+    w_pla = cls.w    
+    ax = axes[0]        
+    ax.scatter(X[:,0], X[:,1], c=y, cmap=plt.cm.Paired, s=20)
+    plot_contour(w_pla, square_transform, ax)
+    ax.set_xlim([-1, 1])
+    ax.set_title('Data set {0}: Score: {1}'.format(0, cls.score(Xt, y)))
+
+    fe = axes[1]
+    fe.scatter(Xt[:, 1], Xt[:, 2], c=y, cmap=plt.cm.Paired, s=20)
+    fe.set_xlim([0, 1])
+    fe.set_title('Data set {0}: Feature Space')
+    plot_hyperplane(w_pla, fe, 'r--', linewidth=4)
+
     plt.show()
+    
 
 def run():
     """
