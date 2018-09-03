@@ -1,5 +1,5 @@
 # Week 3 Exercises
-The exercises for week 2 can be found below. Remember to look at all the exercises before class.
+The exercises for week 3 can be found here. Remember to look at all the exercises before class.
 
 This week the main coding exercise is quite comprehensive.
 There are not so many theoretical questions but some of them are very hard.
