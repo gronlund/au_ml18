@@ -35,19 +35,16 @@ class PerceptronClassifier():
         Saves:
         w: numpy array shape (d,) normal vector of the best hyperplane found for separating X, y 
         may not seperate the data fully
-        hist: list of (w, x, y) - algorithm history - store current w and misclassified point x and label y picked for update in each round of the algorith. 
-        Used only for animation - you can ignore if you do not need animation (remember to take a copies)
+ies)
         
     
         """
         if w is None:
             w = np.zeros(X.shape[1])       
         bestw = w
-        L = []
         ### YOUR CODE
         ### END CODE
         self.w = bestw
-        self.history = L
 
     def predict(self, X):
         """ predict function for classifier
