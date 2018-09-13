@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 from logistic_regression_solved import LogisticRegressionClassifier
 from h1_util import print_score, export_fig
 import matplotlib.pyplot as plt
+from argparse import ArgumentParser
 
 def load_branche_data(keys):
     """
@@ -64,7 +65,7 @@ def branche_data_test(lr=0.1, batch_size=16, epochs=50):
     c.fit(feat_train)
     bag_of_words_feat_train = c.transform(feat_train).toarray()
     classifier = LogisticRegressionClassifier()
-    classifier.fit(bag_of_words_feat_train, y_train, lr=0.1, batch_size=16, epochs=50)
+    classifier.fit(bag_of_words_feat_train, y_train, lr=lr, batch_size=batch_size, epochs=epochs)
     print('Logistic Regression Industri Codes Classifier')
     bag_of_words_feat_test = c.transform(feat_test).toarray()
     print_score(classifier, bag_of_words_feat_train, bag_of_words_feat_test, y_train, y_test)
@@ -80,4 +81,17 @@ def branche_data_test(lr=0.1, batch_size=16, epochs=50):
 
 
 if __name__=='__main__':
-    branche_data_test()
+    parser = ArgumentParser()
+    parser.add_argument('-lr', dest='lr', type=float, default=-1)
+    parser.add_argument('-bs', type=int, dest='batch_size', default=-1)
+    parser.add_argument('-epochs', dest='epochs', type=int, default=-1)    
+    args = parser.parse_args()
+    print('vars args', vars(args))
+    kwargs = {}
+    if args.lr >= 0:
+        kwargs['lr'] = args.lr
+    if args.batch_size >=0:
+        kwargs['batch_size'] = args.batch_size
+    if args.epochs >=0:
+        kwargs['epochs'] = args.epochs            
+    branche_data_test(**kwargs)
