@@ -4,8 +4,9 @@ import pandas as pd
 import os
 import urllib
 from sklearn.model_selection import train_test_split
-from logistic_regression import LogisticRegressionClassifier
-from h1_util import print_score
+from logistic_regression_solved import LogisticRegressionClassifier
+from h1_util import print_score, export_fig
+import matplotlib.pyplot as plt
 
 def load_branche_data(keys):
     """
@@ -56,7 +57,7 @@ def print_errors(classifier, feat, raw_feat, labels, class_names, top=10):
     print('*'*30)
 
 
-def branche_data_test():
+def branche_data_test(lr=0.1, batch_size=16, epochs=50):
     keys = [(561010, 'Restauranter'), (620100, 'Computerprogrammering')]
     feat_train, feat_test, y_train, y_test, cnames = get_branche_data(keys)
     c = CountVectorizer()
@@ -67,6 +68,15 @@ def branche_data_test():
     print('Logistic Regression Industri Codes Classifier')
     bag_of_words_feat_test = c.transform(feat_test).toarray()
     print_score(classifier, bag_of_words_feat_train, bag_of_words_feat_test, y_train, y_test)
+    hist = classifier.history
+    fig, ax = plt.subplots()
+    ax.plot(np.array(range(1, 1 + len(hist))), hist, 'b-x')
+    ax.set_title('Cost as a function of epoch for industry codes data')
+    ax.set_xlabel('epoch')
+    ax.set_ylabel('Ein (1/n NLL)')
+    export_fig(fig, 'logreg_text_cost_per_epoch.png')
+    plt.show()
+
 
 
 if __name__=='__main__':
