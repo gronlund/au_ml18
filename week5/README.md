@@ -4,5 +4,5 @@ The exercises for week 5 can be found here. Remember to look at all the exercise
 There is some coding in the theory exercises.
 Now get started with the exercises (download the notebooks to work with them).
 
-* [Theory Exercies](theory.ipynb)
-* [Bias Variance Exerciser](BiasVariance.ipynb)
+* [Theory Exercises](theory.ipynb)
+* [Bias Variance Exercise](BiasVariance.ipynb)
