@@ -5,4 +5,4 @@ This week there is no specific coding exercise since hand in 1 is now online.
 There is some coding in the theory exercises.
 Now get started with the exercises (download the notebooks to work with them).
 
-* [Theory Exercies](theory.ipynb)
+* [Theory Exercises](theory.ipynb)
