@@ -69,9 +69,9 @@ def get_init_params(input_dim, hidden_size, output_size):
     Returns:
        dict of randomly initialized parameter matrices.
     """
-    W1 = np.random.normal(0, np.sqrt(1./(input_dim+hidden_size)), size=(input_dim, hidden_size))
+    W1 = np.random.normal(0, np.sqrt(2./(input_dim+hidden_size)), size=(input_dim, hidden_size))
     b1 = np.zeros((1, hidden_size))
-    W2 = np.random.normal(0, np.sqrt(2./(hidden_size+output_size)), size=(hidden_size, output_size))
+    W2 = np.random.normal(0, np.sqrt(4./(hidden_size+output_size)), size=(hidden_size, output_size))
     b2 = np.zeros((1, output_size))
     return {'W1': W1, 'b1': b1, 'W2': W2, 'b2': b2}
 
